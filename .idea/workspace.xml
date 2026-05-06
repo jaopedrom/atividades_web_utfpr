@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="07365bed-91ad-450a-8dc2-813e426f4ffd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/06_atv_react" beforeDir="false" afterPath="$PROJECT_DIR$/06_atv_react" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06_atv_react/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/06_atv_react/src/app/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06_atv_react/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/06_atv_react/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06_atv_react/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/06_atv_react/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06_atv_react/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/06_atv_react/src/app/page.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3DAbYQfVptveLOgLPGw4UF1WKKk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.23567.141" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07365bed-91ad-450a-8dc2-813e426f4ffd" name="Changes" comment="" />
+      <created>1777727868297</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777727868297</updated>
+      <workItem from="1777727869346" duration="5000" />
+    </task>
+    <servers />
+  </component>
+</project>

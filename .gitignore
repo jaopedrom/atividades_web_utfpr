@@ -1,0 +1,11 @@
+WEB-UTFPR/
+node_modules/
+.next/dist/
+
+# ignorar pasta específica
+WEB-UTFPR/
+
+# outros comuns
+.env
+dist/
+build/
