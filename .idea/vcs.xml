@@ -4,6 +4,5 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/06_atv_react" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/WEB-UTFPR" vcs="Git" />
   </component>
 </project>
