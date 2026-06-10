@@ -4,17 +4,24 @@ import config from './config';
 import swaggerPlugin from './plugins/swagger';
 import zodPlugin from './plugins/zod';
 import filmesRoutes from './routes/filmes';
+import requestLoggerPlugin from './plugins/request-looger';
 
 export const app = Fastify({
   logger: true
 });
 
-// Registrar plugins
+// registra plugins
 app.register(zodPlugin);
 app.register(swaggerPlugin);
+app.register(requestLoggerPlugin);
 
-// Registrar rotas
-app.register(filmesRoutes, { prefix: '/filmes' });
+// rota raiz
+app.get('/', async () => {
+  return { mensagem: 'A API de filmes está funcionando!' };
+});
+
+// registra rotas
+app.register(filmesRoutes);
 
 export const start = async () => {
   try {

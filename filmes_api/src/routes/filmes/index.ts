@@ -5,12 +5,13 @@ import {
   OmdbResponseSchema,
   ErroSchema,
   FilmeBuscaResultadoSchema,
+  OmdbMovieDetailSchema,
 } from '../../schemas';
 import { buscarFilmeId, buscarFilmesPorTermo, listarFilmesExterno } from '../../services/filme.service';
 
 const filmesRoutes: FastifyPluginAsyncZod = async (fastify) => {
   // retorno lista de filmes
-  fastify.get('/', {
+  fastify.get('/filmes', {
     schema: {
       tags: ['filmes'],
       summary: 'Lista filmes padrão',
@@ -41,10 +42,12 @@ const filmesRoutes: FastifyPluginAsyncZod = async (fastify) => {
       },
     },
   }, async (request, reply) => {
-    const { termo, pagina, limite } = request.query;
+    const { q, pagina, limite } = request.query;
 
     try {
-      const filmes = await buscarFilmesPorTermo(termo, Number(pagina), Number(limite));
+      const p = Number(pagina) || 1;
+      const l = Number(limite) || 10;
+      const filmes = await buscarFilmesPorTermo(q, p, l);
       return filmes;
     } catch (error) {
       request.log.error(error);
@@ -53,13 +56,13 @@ const filmesRoutes: FastifyPluginAsyncZod = async (fastify) => {
   });
 
   // retorno de um filme pelo id
-  fastify.get('/:id', {
+  fastify.get('/filmes/:id', {
     schema: {
       tags: ['filmes'],
       summary: 'Busca um filme pelo ID',
       params: FilmeParamsSchema,
       response: {
-        200: OmdbResponseSchema,
+        200: OmdbMovieDetailSchema,
         500: ErroSchema,
       },
     },

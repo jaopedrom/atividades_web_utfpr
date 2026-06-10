@@ -1,10 +1,11 @@
 import { z } from 'zod/v4';
 import { ErroSchema } from './common.schema';
-import { OmdbResponseSchema, OmdbSearchResultSchema, FilmeParamsSchema, FilmeBuscaQuerySchema, FilmeBuscaResultadoSchema } from './filme.schema';
+import { OmdbResponseSchema, OmdbSearchResultSchema, FilmeParamsSchema, FilmeBuscaQuerySchema, FilmeBuscaResultadoSchema, OmdbMovieDetailSchema } from './filme.schema';
 
 z.globalRegistry.add(ErroSchema, { id: 'Erro' });
 z.globalRegistry.add(OmdbResponseSchema, { id: 'OmdbResponse' });
 z.globalRegistry.add(OmdbSearchResultSchema, { id: 'OmdbSearchResult' });
+z.globalRegistry.add(OmdbMovieDetailSchema, { id: 'OmdbMovieDetail' });
 
 export {
     ErroSchema,
@@ -13,4 +14,5 @@ export {
     FilmeParamsSchema,
     FilmeBuscaQuerySchema,
     FilmeBuscaResultadoSchema,
+    OmdbMovieDetailSchema,
 };

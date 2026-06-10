@@ -16,6 +16,9 @@ export const OmdbResponseSchema = z.object({
     Response: z.string().describe('Status da resposta da API ("True" ou "False")'),
 });
 
+// schema para os detalhes de um filme
+export const OmdbMovieDetailSchema = z.record(z.string(), z.unknown()).describe('Detalhes do filme retornado pela OMDb API');
+
 // schema para parâmetros de rota
 export const FilmeParamsSchema = z.object({
     id: z.string().describe('ID único do título no IMDb')
@@ -23,14 +26,14 @@ export const FilmeParamsSchema = z.object({
 
 // schema para query de busca
 export const FilmeBuscaQuerySchema = z.object({
-    termo: z.string().optional().describe('Termo para a busca de filmes'),
+    q: z.string().optional().describe('Termo para a busca de filmes'),
     pagina: z.string().optional().describe('Página dos resultados'),
     limite: z.string().optional().describe('Limite de itens (opcional)')
 });
 
 // schema para o resultado da busca por termo
 export const FilmeBuscaResultadoSchema = z.object({
-    termo: z.string().describe('Termo buscado'),
+    q: z.string().describe('Termo buscado'),
     pagina: z.number().describe('Página atual'),
     limite: z.number().describe('Limite por página'),
     totalResults: z.number().describe('Total de resultados na API'),

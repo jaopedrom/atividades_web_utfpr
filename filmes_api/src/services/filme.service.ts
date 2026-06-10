@@ -45,13 +45,13 @@ export const buscarFilmeId = async (id: string) => {
 }
 
 // GET /busca?q=valor
-export const buscarFilmesPorTermo = async (termo = '', pagina = 1, limite = 10) => {
+export const buscarFilmesPorTermo = async (q = '', pagina = 1, limite = 10) => {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 5000);
 
     try {
         const response = await fetch(
-            `${BASE_URL}?apikey=${config.omdbApiKey}&s=${encodeURIComponent(termo)}&type=movie&page=${pagina}`,
+            `${BASE_URL}?apikey=${config.omdbApiKey}&s=${encodeURIComponent(q)}&type=movie&page=${pagina}`,
             { signal: controller.signal }
         );
 
@@ -62,11 +62,11 @@ export const buscarFilmesPorTermo = async (termo = '', pagina = 1, limite = 10) 
         const data = await response.json() as OmdbResponse;
 
         return {
-            termo,
+            q,
             pagina,
             limite,
-            totalResults: Number(data.totalResults),
-            filmes: data.Search.slice(0, limite), // limite aplicado localmente
+            totalResults: Number(data.totalResults) || 0,
+            filmes: data.Search?.slice(0, limite) || [], // limite aplicado localmente
         };
     } finally {
         clearTimeout(timeout);

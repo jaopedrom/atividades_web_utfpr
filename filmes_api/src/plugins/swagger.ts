@@ -24,7 +24,6 @@ async function swaggerPlugin(fastify: FastifyInstance) {
                 },
             ],
             tags: [
-                { name: 'status', description: 'Status do servidor' },
                 { name: 'filmes', description: 'Filmes' },
             ],
         },
